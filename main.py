@@ -16,4 +16,7 @@ def api(query_city):
     k=Weather(query_city).getWeather()
     return jsonify(k)
 
-app.run(debug=True)
+def main():
+    app.run(debug=True)
+
+main()
