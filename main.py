@@ -1,7 +1,5 @@
 from flask import Flask, jsonify
 from weather import Weather
-import os
-from os import environ
 
 '''
     This Program uses OpenWeatherMapAPI.
@@ -12,12 +10,10 @@ from os import environ
 #initializing Flask Object
 app=Flask(__name__)
 
-apikey=environ['apikey']
-
 #routing web server with end points
 @app.route('/api/<query_city>')
-def api(query_city,apikey):
-    k=Weather(query_city,apikey).getWeather()
+def api(query_city):
+    k=Weather(query_city).getWeather()
     return jsonify(k)
 
 app.run(debug=True)

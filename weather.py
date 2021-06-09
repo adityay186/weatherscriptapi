@@ -4,8 +4,8 @@ import urllib
 #class for Weather Data Object
 class Weather():
     #initializing fields
-    def __init__(self,qcity,apikey): #api key goes here(get it from openweathermap.org)
-        self.apikey=apikey
+    def __init__(self,qcity): #api key goes here(get it from openweathermap.org)
+        self.apikey="0e0555f58bf0f71bf3e8fba507376353"
         self.qcity=qcity
         self.city = None
         self.country = None
